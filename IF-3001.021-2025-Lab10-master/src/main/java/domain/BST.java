@@ -8,6 +8,7 @@ package domain;
 public class BST implements  Tree {
     private BTreeNode root; //se refiere a la raiz del arbol
 
+    @Override
     public BTreeNode getRoot() {
         return root;
     }
@@ -237,6 +238,7 @@ public class BST implements  Tree {
         return result;
     }
 
+    @Override
     public boolean isBalanced() throws TreeException {
         if (isEmpty()) {
             // Un árbol vacío generalmente se considera balanceado.

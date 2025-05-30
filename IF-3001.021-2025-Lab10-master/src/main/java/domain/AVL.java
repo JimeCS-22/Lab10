@@ -375,6 +375,7 @@ public class AVL implements Tree {
         }
     }
 
+    @Override
     public boolean isBalanced() {
         return isBalanced(root);
     }
@@ -403,6 +404,7 @@ public class AVL implements Tree {
         return result;
     }
 
+    @Override
     public BTreeNode getRoot() {
         return root;
     }

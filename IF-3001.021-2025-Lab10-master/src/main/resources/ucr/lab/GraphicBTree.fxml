@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
@@ -53,12 +54,22 @@
                         <Font name="Arial" size="20.0" />
                     </font>
                 </Button>
-                <Pane fx:id="treePane" layoutY="136.0" onScroll="#handleScrollZoom" prefHeight="583.0" prefWidth="790.0" style="-fx-background-color: #4053A9;" />
-            <Button fx:id="tourInfoButton1" layoutX="583.0" layoutY="90.0" mnemonicParsing="false" onAction="#tourInfoOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Is balance?">
+            <Button fx:id="BalanceButton" layoutX="559.0" layoutY="90.0" mnemonicParsing="false" onAction="#BalanceOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Is balance?">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Button>
+            <RadioButton fx:id="Bts" layoutX="278.0" layoutY="136.0" mnemonicParsing="false" onAction="#BtsOnAction" text="BTS" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="Avl" layoutX="395.0" layoutY="136.0" mnemonicParsing="false" onAction="#AvlOnAction" text="AVL" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+                <Pane fx:id="treePane" layoutY="166.0" onScroll="#handleScrollZoom" prefHeight="553.0" prefWidth="790.0" style="-fx-background-color: #4053A9;" />
             </children>
         </Pane>
     </children>

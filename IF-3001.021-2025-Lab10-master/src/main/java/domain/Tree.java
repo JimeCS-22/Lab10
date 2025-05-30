@@ -1,6 +1,9 @@
 package domain;
 
 public interface Tree {
+
+    public BTreeNode getRoot();
+
     //devuelve el número de elementos en el árbol
     public int size() throws TreeException;
     //private int size(BTreeNode nodo)
@@ -57,4 +60,6 @@ public interface Tree {
     //para mostrar todos los elementos existentes
     public String postOrder() throws TreeException;
     //private String postOrder(BTreeNode node)
+
+    public boolean isBalanced() throws TreeException;
 }

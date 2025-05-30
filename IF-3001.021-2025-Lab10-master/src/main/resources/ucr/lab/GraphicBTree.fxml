@@ -38,22 +38,27 @@
                         </Text>
                     </children>
                 </Pane>
-                <Button fx:id="randomizeButton" layoutX="113.0" layoutY="90.0" mnemonicParsing="false" onAction="#randomizeOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Randomize">
+                <Button fx:id="randomizeButton" layoutY="90.0" mnemonicParsing="false" onAction="#randomizeOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Randomize">
                     <font>
                         <Font name="Arial" size="20.0" />
                     </font>
                 </Button>
-                <Button fx:id="tourInfoButton" layoutX="504.0" layoutY="90.0" mnemonicParsing="false" onAction="#tourInfoOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Tour Info">
+                <Button fx:id="tourInfoButton" layoutX="382.0" layoutY="90.0" mnemonicParsing="false" onAction="#tourInfoOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Tour Info">
                     <font>
                         <Font name="Arial" size="20.0" />
                     </font>
                 </Button>
-                <Button fx:id="levelsButton" layoutX="313.0" layoutY="90.0" mnemonicParsing="false" onAction="#levelsOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Levels">
+                <Button fx:id="levelsButton" layoutX="195.0" layoutY="90.0" mnemonicParsing="false" onAction="#levelsOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Levels">
                     <font>
                         <Font name="Arial" size="20.0" />
                     </font>
                 </Button>
-                <Pane fx:id="treePane" onScroll="#handleScrollZoom" layoutY="136.0" prefHeight="583.0" prefWidth="790.0" style="-fx-background-color: #4053A9;" />
+                <Pane fx:id="treePane" layoutY="136.0" onScroll="#handleScrollZoom" prefHeight="583.0" prefWidth="790.0" style="-fx-background-color: #4053A9;" />
+            <Button fx:id="tourInfoButton1" layoutX="583.0" layoutY="90.0" mnemonicParsing="false" onAction="#tourInfoOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Is balance?">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Button>
             </children>
         </Pane>
     </children>

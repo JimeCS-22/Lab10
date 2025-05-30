@@ -8,6 +8,10 @@ package domain;
 public class BST implements  Tree {
     private BTreeNode root; //se refiere a la raiz del arbol
 
+    public BTreeNode getRoot() {
+        return root;
+    }
+
     @Override
     public int size() throws TreeException {
         if(isEmpty())
@@ -231,6 +235,35 @@ public class BST implements  Tree {
             throw new RuntimeException(e);
         }
         return result;
+    }
+
+    public boolean isBalanced() throws TreeException {
+        if (isEmpty()) {
+            // Un árbol vacío generalmente se considera balanceado.
+            // Podrías lanzar una excepción aquí si tu definición requiere un árbol no vacío.
+            return true;
+        }
+        return isBalanced(root);
+    }
+
+    private boolean isBalanced(BTreeNode node) {
+        // Un nodo nulo (subárbol vacío) siempre está balanceado.
+        if (node == null) {
+            return true;
+        }
+
+        // Obtener la altura de los subárboles izquierdo y derecho.
+        int leftHeight = height(node.left);
+        int rightHeight = height(node.right);
+
+        // Verificar si el nodo actual está balanceado.
+        // La diferencia absoluta entre las alturas debe ser como máximo 1.
+        if (Math.abs(leftHeight - rightHeight) > 1) {
+            return false;
+        }
+
+        // Verificar recursivamente si ambos subárboles izquierdo y derecho están balanceados.
+        return isBalanced(node.left) && isBalanced(node.right);
     }
 
 }

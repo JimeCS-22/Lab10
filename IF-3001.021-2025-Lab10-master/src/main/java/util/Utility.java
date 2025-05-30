@@ -84,4 +84,42 @@ public class Utility {
         }
         return result;
     }
+
+    public static String[] RandomAlphabet (int bound){
+
+        String [] Alphabet =  {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+                             "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+
+        Random random = new Random();
+        String [] letraAleatoria =  new String[bound];
+
+        for (int i = 0; i <bound ; i++) {
+
+            int randomIndex = random.nextInt(Alphabet.length);
+            letraAleatoria[i] = Alphabet[randomIndex];
+        }
+        
+        return letraAleatoria;
+
+    }
+
+    public static String[] randomNames (int bound){
+        String [] names = {"Sofía", "Mateo", "Valentina", "Sebastián", "Isabella",
+                "Santiago", "Camila", "Matías", "Valeria", "Nicolás",
+                "Mariana", "Alejandro", "Daniela", "Gabriel", "Luciana",
+                "Diego", "Andrea", "Pablo", "Fernanda", "Manuel"
+        };
+
+        Random random = new Random();
+        String [] Nombre = new String[bound];
+
+        for (int i = 0; i < bound; i++) {
+
+            int aleatorio = random.nextInt(names.length);
+            Nombre[i] = names[aleatorio];
+
+        }
+
+        return Nombre;
+    }
 }

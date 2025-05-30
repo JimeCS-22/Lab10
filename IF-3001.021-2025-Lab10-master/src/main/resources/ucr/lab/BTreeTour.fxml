@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AP" prefHeight="674.0" prefWidth="784.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #384463 0.0%, #343336 100.0%);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BTreeTourController">
+    <children>
+        <Pane fx:id="mainPain" prefHeight="719.0" prefWidth="790.0">
+            <children>
+                <Pane prefHeight="83.0" prefWidth="790.0" style="-fx-background-color: #536dde;">
+               <children>
+                        <Text fx:id="txtMessage" layoutX="-20.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Graphic Binary Tree - Transversal Tour" textAlignment="CENTER" wrappingWidth="769.0">
+                            <font>
+                                <Font name="Serif Regular" size="40.0" />
+                            </font>
+                            <fill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="0.5260721445083618" green="0.6059494614601135" blue="0.8947368264198303" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </fill>
+                        </Text>
+               </children>
+                </Pane>
+                <Pane fx:id="buttonPane" layoutX="11.0" layoutY="647.0" prefHeight="72.0" prefWidth="769.0" />
+                <Button fx:id="autoButton1" layoutX="14.0" layoutY="109.0" mnemonicParsing="false" onAction="#randomizeOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Randomize">
+                    <font>
+                        <Font name="Arial" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="inOrderButton" layoutX="384.0" layoutY="109.0" mnemonicParsing="false" onAction="#inOrderOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="In Order">
+                    <font>
+                        <Font name="Arial" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="preOrderButton" layoutX="197.0" layoutY="109.0" mnemonicParsing="false" onAction="#preOrderOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Pre Order">
+                    <font>
+                        <Font name="Arial" size="20.0" />
+                    </font>
+                </Button>
+                  <Pane fx:id="treePane" layoutY="189.0" onScroll="#handleScrollZoom" prefHeight="530.0" prefWidth="790.0" style="-fx-background-color: #536dde;" />
+            <Text fx:id="ordertxtMessage" layoutX="149.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pre Order Transversal Tour (N-L-R)" textAlignment="CENTER" wrappingWidth="492.94921875">
+               <font>
+                  <Font name="Serif Regular" size="30.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.5260721445083618" green="0.6059494614601135" blue="0.8947368264198303" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Button fx:id="postOrderButton" layoutX="566.0" layoutY="109.0" mnemonicParsing="false" onAction="#postOrderOnAction" prefHeight="37.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-background-color: #9b9b9b;" text="Post Order">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

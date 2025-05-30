@@ -52,7 +52,7 @@ public class HelloController {
 
     @FXML
     public void BTreeTourOnAction(ActionEvent actionEvent) throws IOException {
-        load("BTreeTour.fxml");
+        load("BSTAVLTour.fxml");
     }
 
     @FXML

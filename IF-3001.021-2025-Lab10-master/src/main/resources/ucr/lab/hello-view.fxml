@@ -18,19 +18,19 @@
                 </Button>
                 <VBox style="-fx-background-color: #0D1824;">
                     <children>
-                        <Button mnemonicParsing="false" onAction="#GraphicBTreeOnAction" onMousePressed="#exampleOnMousePressed" prefHeight="62.0" prefWidth="253.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Graphic BTree" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#GraphicBTreeOnAction" onMousePressed="#exampleOnMousePressed" prefHeight="62.0" prefWidth="253.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Graphic BST/AVL" textFill="WHITE">
                             <font>
-                                <Font name="Arial" size="30.0" />
+                                <Font name="Arial" size="26.0" />
                             </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#BTreeTourOnAction" onMousePressed="#exampleOnMousePressed" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="BTree Tour" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#BTreeTourOnAction" onMousePressed="#exampleOnMousePressed" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="BST/AVL Tour" textFill="WHITE">
                             <font>
-                                <Font name="Arial" size="30.0" />
+                                <Font name="Arial" size="26.0" />
                             </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#BTreeOperationsOnAction" prefHeight="62.0" prefWidth="309.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="BTree Operations." textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#BTreeOperationsOnAction" prefHeight="62.0" prefWidth="284.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="BST/AVL Operations " textFill="WHITE">
                             <font>
-                                <Font name="Arial" size="30.0" />
+                                <Font name="Arial" size="26.0" />
                             </font>
                         </Button>
                         <Button mnemonicParsing="false" onAction="#Exit" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Exit" textFill="WHITE">
@@ -46,7 +46,7 @@
     <center>
         <AnchorPane fx:id="ap" prefHeight="769.0" prefWidth="816.0" style="-fx-background-color: #141428;" BorderPane.alignment="CENTER">
             <children>
-                <Text fx:id="txtMessage" fill="#f7f7f7" layoutX="4.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratory No. 9" textAlignment="CENTER" wrappingWidth="781.94921875">
+                <Text fx:id="txtMessage" fill="#f7f7f7" layoutX="4.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratory No. 10" textAlignment="CENTER" wrappingWidth="781.94921875">
                     <font>
                         <Font name="Arial" size="40.0" />
                     </font>

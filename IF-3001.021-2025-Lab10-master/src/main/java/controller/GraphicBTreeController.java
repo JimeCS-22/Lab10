@@ -43,7 +43,7 @@ public class GraphicBTreeController {
     @javafx.fxml.FXML
     private Button randomizeButton;
 
-    // ¡CORREGIDO! Ahora almacenará una instancia que implementa la interfaz Tree
+    // Almacena una instancia que implementa la interfaz Tree
     private Tree tree;
     private int[] treeValues; // Para almacenar los valores y poder recrear el árbol
 

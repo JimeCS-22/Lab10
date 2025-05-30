@@ -54,6 +54,8 @@ class BSTTest {
             System.out.println(bst);
             System.out.println("Is balance ? " + bst.isBalanced());
             System.out.println("Height de element");
+            System.out.println(bst.getAllElementHeightsAsString());
+            System.out.println();
 
 
 
@@ -120,6 +122,9 @@ class BSTTest {
             }
             System.out.println(bst);
             System.out.println("Is balance ? " + bst.isBalanced());
+            System.out.println();
+            System.out.println("Height element");
+            System.out.println(bst.getAllElementHeightsAsString());
 
 
 
@@ -185,6 +190,9 @@ class BSTTest {
             }
             System.out.println(bst);
             System.out.println("Is balance: " + bst.isBalanced());
+            System.out.println();
+            System.out.println("Height element");
+            System.out.println(bst.getAllElementHeightsAsString());
 
 
         } catch (TreeException e) {

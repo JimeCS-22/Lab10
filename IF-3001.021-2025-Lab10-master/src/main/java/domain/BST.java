@@ -169,6 +169,63 @@ public class BST implements  Tree {
         return node.data;
     }
 
+    private void updateHeights(BTreeNode node) {
+        if (node != null) {
+            updateHeights(node.left);  // Recalcula altura del subárbol izquierdo
+            updateHeights(node.right); // Recalcula altura del subárbol derecho
+            node.height = calculateNodeHeightValue(node); // Calcula la altura para este nodo
+        }
+    }
+
+    private int calculateNodeHeightValue(BTreeNode node) {
+        if (node == null) {
+            return -1;
+        }
+        int leftSubtreeHeight = (node.left != null) ? node.left.height : -1;
+        int rightSubtreeHeight = (node.right != null) ? node.right.height : -1;
+        return Math.max(leftSubtreeHeight, rightSubtreeHeight) + 1;
+    }
+
+    public int getElementHeight(Object element) throws TreeException {
+        if (isEmpty()) throw new TreeException("BST is empty. Cannot get element height.");
+        return getElementHeight(this.root, element);
+    }
+
+    private int getElementHeight(BTreeNode node, Object element) throws TreeException {
+        if (node == null) {
+            throw new TreeException("Element [" + element + "] does not exist in the BST.");
+        }
+        int result = util.Utility.compare(element, node.data);
+        if (result == 0) {
+            return node.height;
+        } else if (result < 0) {
+            return getElementHeight(node.left, element);
+        } else {
+            return getElementHeight(node.right, element);
+        }
+    }
+
+    public String getAllElementHeightsAsString() throws TreeException {
+        if (isEmpty()) throw new TreeException("BST is empty. Cannot get all element heights.");
+        String result = collectElementHeightsAsString(this.root);
+        // Eliminar la última ", " si existe y no está vacío
+        if (result.length() > 2) { // Asegurarse de que haya al menos un "X (h:Y), " para recortar
+            return result.substring(0, result.length() - 2);
+        }
+        return result; // Si el árbol tiene un solo nodo o está vacío (aunque el throw lo maneja)
+    }
+
+    private String collectElementHeightsAsString(BTreeNode node) {
+        String result = "";
+        if (node != null) {
+            // Recorrido inorden para orden lógico
+            result += collectElementHeightsAsString(node.left);
+            result += node.data + " (h:" + node.height + "), ";
+            result += collectElementHeightsAsString(node.right);
+        }
+        return result;
+    }
+
     @Override
     public String preOrder() throws TreeException {
         if(isEmpty())

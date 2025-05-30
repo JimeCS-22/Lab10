@@ -23,11 +23,13 @@ public class AVL implements  Tree {
 
     @Override
     public void clear() {
+
         root = null;
     }
 
     @Override
     public boolean isEmpty() {
+
         return root==null;
     }
 
@@ -48,7 +50,8 @@ public class AVL implements  Tree {
 
     @Override
     public void add(Object element) {
-       this.root = add(root, element, "root");
+
+        this.root = add(root, element, "root");
     }
 
     private BTreeNode add(BTreeNode node, Object element, String path){

@@ -90,4 +90,13 @@ public class FXUtility {
         alert.setContentText(msg);
         alert.showAndWait();
     }
+
+    public static Optional<ButtonType> showAlert(String title, String message, Alert.AlertType information) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null); // Sin encabezado
+        alert.setContentText(message);
+        alert.showAndWait();
+        return null;
+    }
 }
